@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "18f41e4d342e444b",
+    "type": "split",
+    "children": [
+      {
+        "id": "64027cc5097e8ac0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c5bdc4adefdb1f6",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "статьи/Pixel-Accurate Depth Evaluation in Realistic Driving Scenarios-1906.08953v1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Pixel-Accurate Depth Evaluation in Realistic Driving Scenarios-1906.08953v1"
+            }
+          },
+          {
+            "id": "dbd6c0b8f03e18f8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
+          },
+          {
+            "id": "85668ad941b53354",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Архитектура.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Архитектура"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8ed6b5951f80b2a",
+    "type": "split",
+    "children": [
+      {
+        "id": "e89f90904dd9ce42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86a1ea866a9cc8fb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "190e253e576334ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "560a35d1430307dc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6cd72dce5602584f",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5cc9d0052f9000c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3716fa6f0ce41467",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Оценка глубины.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Оценка глубины"
+            }
+          },
+          {
+            "id": "5559e65fcafcad18",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Оценка глубины.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Оценка глубины"
+            }
+          },
+          {
+            "id": "74144dbc5710e4ed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1d665d17ad10ecfd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Оценка глубины.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Оценка глубины"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "8c5bdc4adefdb1f6",
+  "lastOpenFiles": [
+    "Оценка глубины.md",
+    "Протестированные модели.md",
+    "Датасеты.md",
+    "Архитектура существующих систем.md",
+    "статьи/A_Survey_of_FPGA-Based_Vision_Systems_for_Autonomous_Cars.pdf",
+    "статьи/3D Semantic Segmentation for Autonomous Cars-26.pdf",
+    "Статьи.md",
+    "Ссылка на Google Drive.md",
+    "Семантическая сегментация.md",
+    "статьи/Pixel-Accurate Depth Evaluation in Realistic Driving Scenarios-1906.08953v1.pdf",
+    "статьи/Semantic segmentation of autonomous driving scenes based on multi-scale adaptive attention mechanism-fnins-17-1291674.pdf",
+    "статьи/Tonioni_Real-Time_Self-Adaptive_Deep_Stereo_CVPR_2019_paper.pdf",
+    "статьи/BANet: Bilateral Aggregation Network for Module Stereo Matching-2503.03259v2.pdf",
+    "архитектура/Описание архитектуры.md",
+    "статьи/Real-time semantic segmentation for autonomous driving: A review of CNNs, Transformers, and Beyond-1-s2.0-S131915782400315X-main.pdf",
+    "статьи/Segment Any Vehicle: Semantic and Visual ContextDriven SAM and A Benchmark-2508.04260v1.pdf",
+    "статьи/Real-Time_Semantic_Segmentation_of_Spherical_Image.pdf",
+    "статьи/Real-Time Semantic Image Segmentation with Deep Learningfor Autonomous Driving: A Survey-applsci-11-08802.pdf",
+    "диаграммы/Описание архитектуры.md",
+    "Архитектура.md",
+    "todo.md",
+    "Схема системы.canvas",
+    "протестировано_изображения/banet.png",
+    "протестировано_изображения/rf-detr.png",
+    "протестировано_изображения/segment-anything.jpg",
+    "протестировано_изображения/yolo11-m-seg.jpg",
+    "статьи/caste5ab-3230282-large.png",
+    "протестировано_изображения/000000.jpg",
+    "протестировано_изображения/000004.jpg",
+    "протестировано_изображения/out3.png",
+    "ссылки.md"
+  ]
+}

@@ -1,0 +1,8 @@
+**/__pycache__
+weights
+out3.png
+*.pt
+*.pth
+trained_models
+model_results
+*.engine

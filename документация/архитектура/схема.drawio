@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.5">
+  <diagram name="Page-1" id="-MGYAQTvm1OaqIsTgpfD">
+    <mxGraphModel dx="692" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3niveCGf-BABDSpSgmN-5" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-13" connectable="0" parent="c3niveCGf-BABDSpSgmN-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ограничивающие&lt;div&gt;рамки и маски&lt;div&gt;объектов&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1548" y="1" as="geometry">
+            <mxPoint y="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Семантическая&lt;div&gt;сегментация&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="240" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-4" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-12" connectable="0" parent="c3niveCGf-BABDSpSgmN-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Карты глубины" vertex="1">
+          <mxGeometry relative="1" x="0.0793" y="3" as="geometry">
+            <mxPoint x="-37" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Оценка глубины" vertex="1">
+          <mxGeometry height="80" width="120" x="240" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj7nvlrR_QARmM_3N94d-2" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Mj7nvlrR_QARmM_3N94d-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bXgAm7c5xtuLQpW9nAqd-1" connectable="0" parent="Mj7nvlrR_QARmM_3N94d-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Облако точек" vertex="1">
+          <mxGeometry relative="1" x="0.2429" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj7nvlrR_QARmM_3N94d-6" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Mj7nvlrR_QARmM_3N94d-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Объединение и постобработка масок объектов и карты глубины&amp;nbsp;" vertex="1">
+          <mxGeometry height="80" width="120" x="480" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-7" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-8" connectable="0" parent="c3niveCGf-BABDSpSgmN-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Левые изображения&amp;nbsp;&lt;div&gt;из стереопар&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1262" y="4" as="geometry">
+            <mxPoint x="7" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-9" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="460" />
+              <mxPoint x="180" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-11" connectable="0" parent="c3niveCGf-BABDSpSgmN-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Стереопары" vertex="1">
+          <mxGeometry relative="1" x="-0.2679" y="2" as="geometry">
+            <mxPoint x="-42" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Выравнивание изображений в стереопаре&lt;div&gt;(image rectification)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-15" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-16" connectable="0" parent="c3niveCGf-BABDSpSgmN-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Стереопары" vertex="1">
+          <mxGeometry relative="1" x="-0.0595" y="-1" as="geometry">
+            <mxPoint y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Стереокамеры" vertex="1">
+          <mxGeometry height="80" width="120" x="-240" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-18" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" target="c3niveCGf-BABDSpSgmN-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-19" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" target="c3niveCGf-BABDSpSgmN-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="360" />
+              <mxPoint x="540" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Параметры калибровки и положение стереокамер" vertex="1">
+          <mxGeometry height="80" width="120" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="90" width="230" x="-240" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-21" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-60" y="664.8299999999999" as="sourcePoint" />
+            <mxPoint x="-20" y="664.8299999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-22" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Однократно задаваемые настройки" vertex="1">
+          <mxGeometry height="30" width="160" x="-230" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-23" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;dashed=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-60" y="704.8299999999999" as="sourcePoint" />
+            <mxPoint x="-20" y="704.8299999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-24" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" value="Передача информации с использованием каналов/сети" vertex="1">
+          <mxGeometry height="30" width="160" x="-230" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-26" edge="1" parent="1" source="c3niveCGf-BABDSpSgmN-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="c3niveCGf-BABDSpSgmN-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-20" y="560" />
+              <mxPoint x="-20" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3niveCGf-BABDSpSgmN-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Положение автомобиля" vertex="1">
+          <mxGeometry height="80" width="120" x="-240" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj7nvlrR_QARmM_3N94d-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Обнаружение и отслеживание&lt;div&gt;движущихся&lt;/div&gt;&lt;div&gt;объектов&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="720" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj7nvlrR_QARmM_3N94d-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Обнаружение статичных препятствий" vertex="1">
+          <mxGeometry height="80" width="120" x="720" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
