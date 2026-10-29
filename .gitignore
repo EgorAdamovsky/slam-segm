@@ -7,3 +7,4 @@ trained_models
 model_results
 *.engine
 /venv
+*.png
