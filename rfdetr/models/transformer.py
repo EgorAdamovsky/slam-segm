@@ -89,25 +89,24 @@ def gen_encoder_output_proposals(memory, memory_padding_mask, spatial_shapes, un
             valid_H = torch.sum(~mask_flatten_[:, :, 0, 0], 1)
             valid_W = torch.sum(~mask_flatten_[:, 0, :, 0], 1)
         else:
-            valid_H = torch.tensor([H_ for _ in range(N_)], device=memory.device)
-            valid_W = torch.tensor([W_ for _ in range(N_)], device=memory.device)
-
-        grid_y, grid_x = torch.meshgrid(torch.linspace(0, H_ - 1, H_, dtype=torch.float32, device=memory.device),
-                                        torch.linspace(0, W_ - 1, W_, dtype=torch.float32, device=memory.device))
+            valid_H = torch.full((N_,), H_, device=memory.device, dtype=torch.int64)
+            valid_W = torch.full((N_,), W_, device=memory.device, dtype=torch.int64)
+        
+        # ИСПОЛЬЗУЕМ torch.arange ВМЕСТО torch.linspace ДЛЯ СОВМЕСТИМОСТИ С torch.export
+        grid_y = torch.arange(H_, dtype=torch.float32, device=memory.device)
+        grid_x = torch.arange(W_, dtype=torch.float32, device=memory.device)
+        grid_y, grid_x = torch.meshgrid(grid_y, grid_x, indexing='ij')
+        
         grid = torch.cat([grid_x.unsqueeze(-1), grid_y.unsqueeze(-1)], -1) # H_, W_, 2
-
         scale = torch.cat([valid_W.unsqueeze(-1), valid_H.unsqueeze(-1)], 1).view(N_, 1, 1, 2)
         grid = (grid.unsqueeze(0).expand(N_, -1, -1, -1) + 0.5) / scale
-
         wh = torch.ones_like(grid) * 0.05 * (2.0 ** lvl)
-
         proposal = torch.cat((grid, wh), -1).view(N_, -1, 4)
         proposals.append(proposal)
-        _cur += (H_ * W_)
-
+        _cur = _cur + (H_ * W_)
+        
     output_proposals = torch.cat(proposals, 1)
     output_proposals_valid = ((output_proposals > 0.01) & (output_proposals < 0.99)).all(-1, keepdim=True)
-
     if unsigmoid:
         output_proposals = torch.log(output_proposals / (1 - output_proposals)) # unsigmoid
         if memory_padding_mask is not None:
@@ -117,12 +116,12 @@ def gen_encoder_output_proposals(memory, memory_padding_mask, spatial_shapes, un
         if memory_padding_mask is not None:
             output_proposals = output_proposals.masked_fill(memory_padding_mask.unsqueeze(-1), float(0))
         output_proposals = output_proposals.masked_fill(~output_proposals_valid, float(0))
-
+        
     output_memory = memory
     if memory_padding_mask is not None:
         output_memory = output_memory.masked_fill(memory_padding_mask.unsqueeze(-1), float(0))
     output_memory = output_memory.masked_fill(~output_proposals_valid, float(0))
-
+    
     return output_memory.to(memory.dtype), output_proposals.to(memory.dtype)
 
 

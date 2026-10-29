@@ -11,7 +11,8 @@ from torch.utils.flop_counter import FlopCounterMode
 import torch
 
 #model = RFDETRSegPreview(pretrain_weights="trained_models/att2/checkpoint_best_ema.pth", device="cuda")
-model = RFDETRSegPreview(pretrain_weights="trained_models/att5/checkpoint_best_ema.pth", device="cpu")
+#model = RFDETRSegPreview(pretrain_weights="trained_models/att5/checkpoint_best_ema.pth", device="cpu")
+model = RFDETRSegPreview(pretrain_weights="rf-detr-seg-preview.pt", device="cpu")
 
 # model.optimize_for_inference()
 

@@ -1,7 +1,7 @@
 # import h5py
 # import hdf5plugin
 
-# events = h5py.File("/home/quant/datasets/dsec/interlaken_00_c_events_left/events.h5")
+# events = h5py.File("D:/datasets/dsec/interlaken_00_c_events_left/events.h5")
 
 # print(events["events"]["p"])
 
@@ -132,12 +132,12 @@ banet = models.load_banet(DEVICE)
 
 from core.utils.utils import InputPadder
 
-# left_imgs = Path("/home/quant/datasets/drivingstereo/rainy/left-image-half-size/")
-# right_imgs = Path("/home/quant/datasets/drivingstereo/rainy/right-image-half-size/")
-left_imgs = Path("/home/quant/datasets/dsec/interlaken_00_c_images_rectified_left")
-right_imgs = Path("/home/quant/datasets/dsec/interlaken_00_c_images_rectified_right")
-# left_imgs = Path("/home/quant/datasets/dsec/zurich_city_03_a_images_rectified_left")
-# right_imgs = Path("/home/quant/datasets/dsec/zurich_city_03_a_images_rectified_right")
+# left_imgs = Path("D:/datasets/drivingstereo/rainy/left-image-half-size/")
+# right_imgs = Path("D:/datasets/drivingstereo/rainy/right-image-half-size/")
+left_imgs = Path(r"D:\PSU\slam-segm\test")
+right_imgs = Path(r"D:\PSU\slam-segm\test")
+# left_imgs = Path("D:/datasets/dsec/zurich_city_03_a_images_rectified_left")
+# right_imgs = Path("D:/datasets/dsec/zurich_city_03_a_images_rectified_right")
 
 frame_id = 0
 

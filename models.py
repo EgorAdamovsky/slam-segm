@@ -10,7 +10,7 @@ def load_banet(device):
     print("Imports OK")
     banet = torch.nn.DataParallel(BANet(None))
     # checkpoint = torch.load("weights/banet_sceneflow.pth")
-    checkpoint = torch.load("weights/banet_kitti.pth")
+    checkpoint = torch.load("weights/banet_kitti.pth", map_location="cpu")
     banet.load_state_dict(checkpoint, strict=True)
     print("Loaded weights")
     banet = banet.module

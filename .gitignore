@@ -6,3 +6,4 @@ out3.png
 trained_models
 model_results
 *.engine
+/venv

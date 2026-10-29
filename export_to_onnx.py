@@ -8,5 +8,9 @@ import os
 import tqdm
 from pathlib import Path
 
-model = RFDETRSegPreview(pretrain_weights="trained_models/att5/checkpoint_best_ema.pth", device="cpu")
+#model = RFDETRSegPreview(pretrain_weights="trained_models/att5/checkpoint_best_ema.pth", device="cpu")
+model = RFDETRSegPreview(pretrain_weights="rf-detr-seg-preview.pt", device="cpu")
+
+model.model.model.eval()
+
 model.export(output_dir="weights/onnx")

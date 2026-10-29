@@ -75,7 +75,7 @@ def export_onnx(output_dir, model, input_names, input_tensors, output_names, dyn
     if hasattr(model, "export"):
         model.export()
     
-    torch.onnx.export(
+        torch.onnx.export(
         model,
         input_tensors,
         output_file,
@@ -86,7 +86,8 @@ def export_onnx(output_dir, model, input_names, input_tensors, output_names, dyn
         do_constant_folding=True,
         verbose=verbose,
         opset_version=opset_version,
-        dynamic_axes=dynamic_axes)
+        dynamic_axes=dynamic_axes,
+        dynamo=False)  # <--- ДОБАВЛЕНА ЭТА СТРОКА
 
     print(f'\nSuccessfully exported ONNX model: {output_file}')
     return output_file
