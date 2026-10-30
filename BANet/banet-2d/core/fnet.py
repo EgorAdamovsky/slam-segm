@@ -18,7 +18,8 @@ class DeconvLayer(nn.Module):
 class FeatureNet(nn.Module):
     def __init__(self):
         super().__init__()
-        model = timm.create_model('mobilenetv2_100', pretrained=True, features_only=True)
+        # ImageNet-веса не качаем: обученный MobileNet уже лежит в чекпоинте BANet.
+        model = timm.create_model('mobilenetv2_100', pretrained=False, features_only=True)
         chans = [16, 24, 32, 96, 160]
         self.conv_stem = model.conv_stem
         self.bn1 = model.bn1

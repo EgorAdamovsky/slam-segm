@@ -18,7 +18,37 @@ from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss, MSELoss
 from transformers.activations import ACT2FN
 from transformers.modeling_outputs import BackboneOutput, BaseModelOutput, BaseModelOutputWithPooling, ImageClassifierOutput
 from transformers.modeling_utils import PreTrainedModel
-from transformers.pytorch_utils import find_pruneable_heads_and_indices, prune_linear_layer
+try:
+    from transformers.pytorch_utils import find_pruneable_heads_and_indices, prune_linear_layer
+except ImportError:
+    # В transformers 5 этих функций уже нет. Они нужны только prune_heads, не инференсу.
+    def find_pruneable_heads_and_indices(heads, n_heads, head_size, already_pruned_heads):
+        mask = torch.ones(n_heads, head_size)
+        heads = set(heads) - already_pruned_heads
+        for head in heads:
+            head = head - sum(1 if h < head else 0 for h in already_pruned_heads)
+            mask[head] = 0
+        mask = mask.view(-1).contiguous().eq(1)
+        index = torch.arange(len(mask))[mask].long()
+        return heads, index
+
+    def prune_linear_layer(layer, index, dim=0):
+        index = index.to(layer.weight.device)
+        weight = layer.weight.index_select(dim, index).clone().detach()
+        bias = None
+        if layer.bias is not None:
+            bias = layer.bias.clone().detach() if dim == 1 else layer.bias[index].clone().detach()
+        new_size = list(layer.weight.size())
+        new_size[dim] = len(index)
+        new_layer = nn.Linear(new_size[1], new_size[0], bias=layer.bias is not None).to(layer.weight.device)
+        new_layer.weight.requires_grad = False
+        new_layer.weight.copy_(weight.contiguous())
+        new_layer.weight.requires_grad = True
+        if bias is not None:
+            new_layer.bias.requires_grad = False
+            new_layer.bias.copy_(bias.contiguous())
+            new_layer.bias.requires_grad = True
+        return new_layer
 from transformers.utils import (
     add_code_sample_docstrings,
     add_start_docstrings,
@@ -30,7 +60,21 @@ from transformers.utils import (
 from transformers.utils.backbone_utils import BackboneMixin
 
 from transformers.configuration_utils import PretrainedConfig
-from transformers.utils.backbone_utils import BackboneConfigMixin, get_aligned_output_features_output_indices
+from transformers.utils.backbone_utils import BackboneConfigMixin
+
+try:
+    from transformers.utils.backbone_utils import get_aligned_output_features_output_indices
+except ImportError:
+    # Функцию убрали в transformers 5. Поведение как в 4.x.
+    def get_aligned_output_features_output_indices(out_features, out_indices, stage_names):
+        if out_features is None and out_indices is None:
+            out_indices = [len(stage_names) - 1]
+            out_features = [stage_names[-1]]
+        elif out_features is not None and out_indices is None:
+            out_indices = [stage_names.index(name) for name in out_features]
+        elif out_features is None and out_indices is not None:
+            out_features = [stage_names[idx] for idx in out_indices]
+        return list(out_features), list(out_indices)
 
 
 logger = logging.get_logger(__name__)
@@ -1010,7 +1054,11 @@ class WindowedDinov2WithRegistersForImageClassification(WindowedDinov2WithRegist
 class WindowedDinov2WithRegistersBackbone(WindowedDinov2WithRegistersPreTrainedModel, BackboneMixin):
     def __init__(self, config: WindowedDinov2WithRegistersConfig):
         super().__init__(config)
-        super()._init_backbone(config)
+        # transformers 5 убрал BackboneMixin._init_backbone. Имена стадий уже лежат в конфиге.
+        if hasattr(BackboneMixin, "_init_backbone"):
+            super()._init_backbone(config)
+        else:
+            self.stage_names = list(config.stage_names)
         self.num_features = [config.hidden_size for _ in range(config.num_hidden_layers + 1)]
         self.embeddings = WindowedDinov2WithRegistersEmbeddings(config)
         self.encoder = WindowedDinov2WithRegistersEncoder(config)
